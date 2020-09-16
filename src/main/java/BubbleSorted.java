@@ -3,7 +3,7 @@ public class BubbleSorted extends SortedAlgorithm {
     GenerateObjects generateObjects = new GenerateObjects();
 
     @Override
-    public Person[] sort(/*Object[] array*/) {
+    public Person[] sort() {
         Person[] persons = new Person[generateObjects.generatePersons().length];
         persons = generateObjects.generatePersons();
 

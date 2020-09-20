@@ -1,5 +1,5 @@
 public abstract class SortedAlgorithm implements Sorted {
-
+    Person[] persons;
 
     @Override
     public void swap(Person[] array, int i1, int i2) {

@@ -13,4 +13,13 @@ public class Sex {
     public String getSex() {
         return sex;
     }
+
+    public int compareTo(Sex o) {
+        return this.sex.compareTo(o.sex);
+    }
+
+    @Override
+    public String toString() {
+        return sex;
+    }
 }

@@ -20,18 +20,18 @@ public class Main {
         double startTime2 = System.currentTimeMillis();
         selectionSort.sort();
         double finishTime2 = System.currentTimeMillis();
-        finishTime2 = (finishTime2 - startTime1) / 1000;
+        finishTime2 = (finishTime2 - startTime2) / 1000;
         System.out.println("Время исполнения сортировки выбором: " + finishTime2);
 
         for (int i = 0; i < persons1.length; i++) {
-            System.out.println(persons1[i] + bubbleSorted.exception()[i]);
+            System.out.println(persons1[i]);
         }
 
         System.out.println("\n\n===========================================\n " +
                 "Начало второго массива \n");
 
         for (int i = 0; i < persons2.length; i++) {
-            System.out.println(persons2[i] + selectionSort.exception()[i]);
+            System.out.println(persons2[i]);
         }
     }
 }

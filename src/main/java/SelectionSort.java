@@ -11,6 +11,11 @@ public class SelectionSort extends SortedAlgorithm {
         sortBySex();
         sortByAge();
         sortByName();
+        try {
+            exception();
+        } catch (NameAndAgeException e) {
+            e.printStackTrace();
+        }
     }
 
     private void sortBySex() {
@@ -52,17 +57,13 @@ public class SelectionSort extends SortedAlgorithm {
         }
     }
 
-    public String[] exception() throws NameAndAgeException {
+    private void exception() throws NameAndAgeException {
         String[] array = new String[persons.length];
         for (int i = 0; i < persons.length - 1; i++) {
             if (persons[i].getName().compareToIgnoreCase(persons[i + 1].getName()) == 0 &&
                     persons[i].getAge() == persons[i + 1].getAge()) {
-                array[i] = "Есть человек с таким же именем, такого же возраста";
-                array[i + 1] = "Есть человек с таким же именем, такого же возраста";
-            } else {
-                array[i] = "";
+                throw new NameAndAgeException();
             }
         }
-        return array;
     }
 }
